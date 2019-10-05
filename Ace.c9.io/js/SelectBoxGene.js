@@ -1,19 +1,33 @@
-function createSelectBox(listName) {
-  //連想配列の配列
-  var list = [
-    { val: "javascript", txt: "JavaScript" },
-    { val: "html", txt: "HTML" },
-    { val: "php", txt: "PHP" }
-];
+function createSelectBox(arrayName, listName) {
+console.log(listName);
+
+console.log(arrayName);
 
   //連想配列をループ処理で値を取り出してセレクトボックスにセットする
-  for (var i = 0; i < list.length; i++) {
+  for (var i = 0; i < arrayName.length; i++) {
     let op = document.createElement("option");
-    op.value = list[i].val;  //value値
-    op.text = list[i].txt;   //テキスト値
+    op.value = arrayName[i].val;  //value値
+    op.text = arrayName[i].txt;   //テキスト値
 
     console.log(op.value + "," + op.text);
     
     document.getElementById(listName).appendChild(op);
   }
 };
+
+
+
+function changeFontSizePlus(){
+  fontSize += 2;
+  editor.setFontSize(fontSize);
+  
+  console.log(fontSize);
+}
+function changeFontSizeMinus(){
+  if(fontSize >= 10){
+    fontSize -= 2;
+  }
+  console.log(fontSize);
+  editor.setFontSize(fontSize);
+
+}

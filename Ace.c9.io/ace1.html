@@ -5,19 +5,18 @@
     <meta charset="UTF-8">
     <title>Dokodemo-Editer</title>
     <script src="js/SelectBoxGene.js"></script>
-    <script src="js/LanguageList.js"></script>
+    <script src="js/List.js"></script>
 
 </head>
 
 <body>
     <button onclick="line_check();">check</button>
-    <select id="languageList" name="language" onchange="outputLanguageSelect(this);">
+    <select name="language" id="languageList" onchange="outputLanguageSelect(this);">
     </select>
-    <select name="theme" onchange="outputThemeSelect(this);">
-        <option value="chrome">chrome</option>
-        <option value="xcode">XCode</option>
-        <option value="monokai">Monokai</option>
+    <select name="theme" id="themeList" onchange="outputThemeSelect(this);">
     </select>
+    <button onclick="changeFontSizePlus();">＋</button>
+    <button onclick="changeFontSizeMinus();">－</button>
     <div id="editor" style="height: 600px"></div>
 
     
@@ -26,7 +25,10 @@
     <script src="js/Main.js"></script>
  
     <script>
-    createSelectBox("languageList");
+        // createSelectBox();
+    createSelectBox(language, "languageList");
+    createSelectBox(theme, "themeList");
+
         </script>
 </body>
 

@@ -12,12 +12,14 @@ editor.setOptions({
 
 var themeName = "chrome";
 var modeName = "javascript";
+var fontSize = 14;
 
 // テキストエディタのテーマを設定する
 editor.setTheme("ace/theme/" + themeName);
 // 言語モード
 editor.getSession().setMode("ace/mode/" + modeName);
-
+// フォントサイズ
+editor.setFontSize(fontSize);
 function line_check() {
     // エディタの行取得
     var a = editor.session.getLength();
