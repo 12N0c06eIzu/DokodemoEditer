@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
     <meta charset="UTF-8">
     <title>Ace Editor sample</title>
@@ -7,11 +8,13 @@
 
 <body>
     <button onclick="line_check();">check</button>
-    <select name="language" onchange="outputLanguageSelect(this);">
+    <select id="languageList" name="language" onchange="outputLanguageSelect(this);">
+        <!--
         <option value="javascript">JavaScript</option>
         <option value="html">HTML</option>
         <option value="java">Java</option>
         <option value="php">PHP</option>
+-->
     </select>
     <select name="theme" onchange="outputThemeSelect(this);">
         <option value="chrome">chrome</option>
@@ -22,6 +25,10 @@
     <div id="editor" style="height: 600px"></div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.0/ace.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.0/ext-language_tools.js"></script>
+
+
+    <script src="/js/SelectBoxGene.js">
+    </script>
 
     <script>
         var themeName = "chrome";
