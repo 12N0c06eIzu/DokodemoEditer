@@ -19,12 +19,12 @@ var theme = [
         txt: "chrome"
     },
     {
-        val: "XCode",
-        txt: "xcode"
+        val: "xcode",
+        txt: "XCode"
     },
     {
-        val: "Monokai",
-        txt: "monokai"
+        val: "monokai",
+        txt: "Monokai"
     }
 ]
 
