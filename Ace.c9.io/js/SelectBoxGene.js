@@ -19,15 +19,16 @@ console.log(arrayName);
 
 function changeFontSizePlus(){
   fontSize += 2;
-  editor.setFontSize(fontSize);
-  
+  // editor.setFontSize(fontSize);
+  this.updateFontSize();
   console.log(fontSize);
 }
 function changeFontSizeMinus(){
   if(fontSize >= 10){
     fontSize -= 2;
   }
+ this.updateFontSize();
   console.log(fontSize);
-  editor.setFontSize(fontSize);
+  // editor.setFontSize(fontSize);
 
 }

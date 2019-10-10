@@ -1,4 +1,3 @@
-{/* <script> */}
 var editor = ace.edit("editor");
 // Chromeのコンソールの警告を解消
 editor.$blockScrolling = Infinity;
@@ -11,7 +10,7 @@ editor.setOptions({
 });
 
 var themeName = "chrome";
-var modeName = "javascript";
+var modeName = "html";
 var fontSize = 14;
 
 // テキストエディタのテーマを設定する
@@ -51,5 +50,3 @@ function outputThemeSelect(obj) {
     editor.setTheme("ace/theme/" + themeName);
 
 }
-
-// </script>

@@ -1,11 +1,12 @@
 var language = [
     {
-        val: "javascript",
-        txt: "JavaScript"
-    },
-    {
+
         val: "html",
         txt: "HTML"
+    },
+    {
+        val: "javascript",
+        txt: "JavaScript"
     },
     {
         val: "php",
