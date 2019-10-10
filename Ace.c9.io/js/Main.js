@@ -11,7 +11,7 @@ editor.setOptions({
 });
 
 var themeName = "chrome";
-var modeName = "javascript";
+var modeName = "html";
 var fontSize = 14;
 
 // テキストエディタのテーマを設定する
