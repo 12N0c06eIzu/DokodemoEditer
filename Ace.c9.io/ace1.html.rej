@@ -1,0 +1,11 @@
+diff a/Ace.c9.io/ace1.html b/Ace.c9.io/ace1.html	(rejected hunks)
+@@ -4,8 +4,7 @@
+ <head>
+     <meta charset="UTF-8">
+     <title>Dokodemo-Editer</title>
+-    <script src="js/SelectBoxGene.js"></script>
+-    <script src="js/List.js"></script>
++
+     <link rel="stylesheet" href="css/menu.css">
+ </head>
+ 
