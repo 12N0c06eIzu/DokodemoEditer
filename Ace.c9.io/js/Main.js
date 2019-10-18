@@ -1,30 +1,60 @@
 var editor = ace.edit("editor");
+
+var themeName, modeName, fontSize;
+
 // Chromeのコンソールの警告を解消
 editor.$blockScrolling = Infinity;
 
-// 自動補完、スニペット、ライブ補完
-editor.setOptions({
-    enableBasicAutocompletion: true,
-    enableSnippets: true,
-    enableLiveAutocompletion: true
-});
+function setupEditer() {
+    window.editor = editor;
 
-var themeName = "chrome";
-var modeName = "html";
-var fontSize = 14;
+    // 自動補完、スニペット、ライブ補完
+    // テキストエディタのテーマを設定する
+    editor.setTheme("ace/theme/chrome");
+    // 言語モード
+    editor.getSession().setMode("ace/mode/html");
+    // フォントサイズ
+    editor.setFontSize(14);
+    editor.setValue(`<!DOCTYPE html>
+    <html>
+    <head>
+    </head>
+    
+    <body>
+    </body>
+    
+    </html>`, 1);
 
-// テキストエディタのテーマを設定する
-editor.setTheme("ace/theme/" + themeName);
-// 言語モード
-editor.getSession().setMode("ace/mode/" + modeName);
-// フォントサイズ
-editor.setFontSize(fontSize);
+    editor.getSession().on('change', function () {
+        update();
+    });
+
+    editor.focus();
+
+    editor.setOptions({
+        enableBasicAutocompletion: true,
+        enableSnippets: true,
+        enableLiveAutocompletion: true
+    });
+}
+
+function update() {
+    var idoc = document.getElementById('iframe').contentWindow.document;
+
+    idoc.open();
+    idoc.write(editor.getValue());
+    idoc.close();
+}
+
+
+
+
 function line_check() {
     // エディタの行取得
     var a = editor.session.getLength();
     console.log(a);
-
 }
+
 
 function outputLanguageSelect(obj) {
     var idl = obj.selectedIndex;
@@ -53,34 +83,34 @@ function outputThemeSelect(obj) {
 
 function createSelectBox(arrayName, listName) {
     console.log(listName);
-    
+
     console.log(arrayName);
-    
-      //連想配列をループ処理で値を取り出してセレクトボックスにセットする
-      for (var i = 0; i < arrayName.length; i++) {
+
+    //連想配列をループ処理で値を取り出してセレクトボックスにセットする
+    for (var i = 0; i < arrayName.length; i++) {
         let op = document.createElement("option");
         op.value = arrayName[i].val;  //value値
         op.text = arrayName[i].txt;   //テキスト値
-    
+
         console.log(op.value + "," + op.text);
-        
+
         document.getElementById(listName).appendChild(op);
-      }
-    };
-    
-    
-    
-    function changeFontSizePlus(){
-      fontSize += 2;
-      editor.setFontSize(fontSize);
-      
-      console.log(fontSize);
     }
-    function changeFontSizeMinus(){
-      if(fontSize >= 10){
+};
+
+
+
+function changeFontSizePlus() {
+    fontSize += 2;
+    editor.setFontSize(fontSize);
+
+    console.log(fontSize);
+}
+function changeFontSizeMinus() {
+    if (fontSize >= 10) {
         fontSize -= 2;
-      }
-      console.log(fontSize);
-      editor.setFontSize(fontSize);
-    
     }
+    console.log(fontSize);
+    editor.setFontSize(fontSize);
+
+}
