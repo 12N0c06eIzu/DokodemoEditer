@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <title>Dokodemo-Editer</title>
     <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="css/main.css">
 </head>
 
 
@@ -27,21 +28,22 @@
 
 <body>
     <div id="container">
-
         <div id="editor">
-
         </div>
-        <iframe id="iframe" frameBorder="0">
 
+        <iframe id="iframe" frameBorder="0">
         </iframe>
     </div>
+    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.0/ace.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.0/ext-language_tools.js"></script>
     <script src="js/Main.js"></script>
-    <script src="js/SelectBoxGene.js"></script>
+    <!-- <script src="js/SelectBoxGene.js"></script> -->
     <script src="js/List.js"></script>
     <script>
         // createSelectBox();
+        setupEditer();
+        update();
         createSelectBox(language, "languageList");
         createSelectBox(theme, "themeList");
     </script>

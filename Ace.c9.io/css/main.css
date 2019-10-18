@@ -1,4 +1,4 @@
-html {
+html, body {
   margin: 0;
   padding: 0;
   height: 100%;
@@ -6,13 +6,13 @@ html {
   overflow: hidden;
 }
 
-body {
+/* body {
   margin: 0;
   padding: 0;
   height: 100%;
   width: 100%;
   overflow: hidden;
-}
+} */
 
 #editer{
     height: 100%;
