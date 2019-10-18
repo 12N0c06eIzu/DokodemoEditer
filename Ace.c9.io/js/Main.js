@@ -2,28 +2,19 @@ var editor = ace.edit("editor");
 
 var themeName, modeName, fontSize;
 
-function line_check() {
-    // エディタの行取得
-    var a = editor.session.getLength();
-    console.log(a);
-}
-
+// Chromeのコンソールの警告を解消
+editor.$blockScrolling = Infinity;
 
 function setupEditer() {
-    // Chromeのコンソールの警告を解消
-    editor.$blockScrolling = Infinity;
+    window.editor = editor;
+
     // 自動補完、スニペット、ライブ補完
-    editor.setOptions({
-        enableBasicAutocompletion: true,
-        enableSnippets: true,
-        enableLiveAutocompletion: true
-    });
     // テキストエディタのテーマを設定する
     editor.setTheme("ace/theme/chrome");
     // 言語モード
     editor.getSession().setMode("ace/mode/html");
     // フォントサイズ
-    editor.setFontSize(14); 
+    editor.setFontSize(14);
     editor.setValue(`<!DOCTYPE html>
     <html>
     <head>
@@ -34,14 +25,35 @@ function setupEditer() {
     
     </html>`, 1);
 
+    editor.getSession().on('change', function () {
+        update();
+    });
+
+    editor.focus();
+
+    editor.setOptions({
+        enableBasicAutocompletion: true,
+        enableSnippets: true,
+        enableLiveAutocompletion: true
+    });
 }
 
 function update() {
+    var idoc = document.getElementById('iframe').contentWindow.document;
 
+    idoc.open();
+    idoc.write(editor.getValue());
+    idoc.close();
 }
 
 
 
+
+function line_check() {
+    // エディタの行取得
+    var a = editor.session.getLength();
+    console.log(a);
+}
 
 
 function outputLanguageSelect(obj) {
