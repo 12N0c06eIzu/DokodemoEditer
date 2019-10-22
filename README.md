@@ -1,5 +1,5 @@
 # DokodemoEditer
-Ace.c9.ioをCDNで利用させてもらって、自分にとって理想なコードエディタを作成しています。
+Ace.c9.ioをCDNで利用させてもらって、自分にとって理想なコードエディタを作成しています。  
 ご利用はこちらから：https://bit.ly/2N1o83J  
 https://12n0c06eizu.github.io/DokodemoEditer/Ace.c9.io/ace1.html
   
