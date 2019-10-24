@@ -18,11 +18,14 @@ function setupEditer() {
     editor.setValue(`<!DOCTYPE html>
     <html>
     <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
     </head>
     
     <body>
+        <footer>
+        </footer>
     </body>
-    
     </html>`, 1);
 
     editor.getSession().on('change', function () {
