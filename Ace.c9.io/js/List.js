@@ -8,8 +8,8 @@ var language = [
         txt: "JavaScript"
     },
     {
-        val: "php",
-        txt: "PHP"
+        val: "css",
+        txt: "CSS"
     }
 ];
 
