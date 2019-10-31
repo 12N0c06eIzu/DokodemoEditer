@@ -13043,7 +13043,6 @@ exports.commands = [{
         editor.prompt({ $type: "commands" });
     },
     readOnly: true
-    
 }, {
     name: "modeSelect",
     description: "Change language mode...",
