@@ -21,7 +21,7 @@ header {
   border-radius: 3px;
   background: #555;
   display: block;
-  content: '';
+  content: "";
   cursor: pointer; }
 
 #nav-open span:before {
@@ -33,7 +33,7 @@ header {
   border-radius: 3px;
   background: #555;
   display: block;
-  content: '';
+  content: "";
   cursor: pointer;
   bottom: -8px; }
 
@@ -46,7 +46,7 @@ header {
   border-radius: 3px;
   background: #555;
   display: block;
-  content: '';
+  content: "";
   cursor: pointer;
   bottom: -16px; }
 
@@ -62,9 +62,9 @@ header {
   height: 100%;
   background: black;
   opacity: 0;
-  -webkit-transition: .3s ease-in-out;
-  -o-transition: .3s ease-in-out;
-  transition: .3s ease-in-out; }
+  -webkit-transition: 0.3s ease-in-out;
+  -o-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out; }
 
 #nav-content {
   overflow: auto;
@@ -80,9 +80,9 @@ header {
   height: 100%;
   background: #fff;
   /*背景色*/
-  -webkit-transition: .3s ease-in-out;
-  -o-transition: .3s ease-in-out;
-  transition: .3s ease-in-out;
+  -webkit-transition: 0.3s ease-in-out;
+  -o-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
   /*滑らかに表示*/
   -webkit-transform: translateX(-105%);
   -ms-transform: translateX(-105%);
@@ -92,7 +92,7 @@ header {
 #nav-input:checked ~ #nav-close {
   display: block;
   /*カバーを表示*/
-  opacity: .5; }
+  opacity: 0.5; }
 
 #nav-input:checked ~ #nav-content {
   -webkit-transform: translateX(0%);
