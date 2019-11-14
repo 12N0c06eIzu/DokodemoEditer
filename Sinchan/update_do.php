@@ -12,9 +12,7 @@
   <title>よくわかるPHPの教科書</title>
 </head>
 <body>
-  <header>
-    <h1 class="font-weight-normal">よくわかるPHPの教科書</h1>
-  </header>
+  
 
   <main>
     <h2>Practice</h2>

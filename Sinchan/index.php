@@ -12,9 +12,7 @@
   <title>よくわかるPHPの教科書</title>
 </head>
 <body>
-  <header>
-    <h1 class="font-weight-normal">トップページです。</h1>
-  </header>
+
   <main>
     <h2>Practice</h2>
     <!-- <a href="input.html">新しいメモを作成する</a> -->

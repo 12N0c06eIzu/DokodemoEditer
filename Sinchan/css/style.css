@@ -1,4 +1,3 @@
-@import url(bootstrap.min.css);
 
 body,
 pre {
@@ -21,7 +20,7 @@ header h1 span {
   display: block;
 }
 main {
-  margin-left: 300px;
+  /* margin-left: 300px; */
   padding: 30px;
 }
 main h2 {
@@ -53,4 +52,4 @@ time {
 }
 article {
   margin-top: 30px;
-}
+} */
