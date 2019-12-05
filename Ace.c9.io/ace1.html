@@ -22,7 +22,13 @@
             </select>
             <button onclick="changeFontSizePlus();">＋</button>
             <button onclick="changeFontSizeMinus();">－</button><br>
+            
+            <!-- <input type="text" id="inputfilename"> -->
             <a href="#" id="download" download="index.html" style="text-decoration: none;">ダウンロード</a>
+
+            <br>
+            <br>
+            <input type="file" name="selfile" id="s_file">
         </div>
     </div>
 </header>
@@ -31,7 +37,7 @@
 <body>
 
     <div id="container">
-        <div id="editor">
+        <div id="editor" name="editor">
         </div>
 
         <iframe id="iframe" frameBorder="0">
@@ -51,7 +57,7 @@
     <script src="js/Main.js"></script>
     <script src="js/SelectBoxGene.js"></script>
     <script src="js/List.js"></script>
-    <script src="js/dounload.js"></script>
+    <script src="js/filecomplete.js"></script>
     <script>
         // createSelectBox();
         setupEditer();
