@@ -21,7 +21,14 @@
             <select name="theme" id="themeList" onchange="outputThemeSelect(this);">
             </select>
             <button onclick="changeFontSizePlus();">＋</button>
-            <button onclick="changeFontSizeMinus();">－</button>
+            <button onclick="changeFontSizeMinus();">－</button><br>
+            
+            <!-- <input type="text" id="inputfilename"> -->
+            <a href="#" id="download" download="index.html" style="text-decoration: none;">ダウンロード</a>
+
+            <br>
+            <br>
+            <input type="file" name="selfile" id="s_file">
         </div>
     </div>
 </header>
@@ -30,7 +37,7 @@
 <body>
 
     <div id="container">
-        <div id="editor">
+        <div id="editor" name="editor">
         </div>
 
         <iframe id="iframe" frameBorder="0">
@@ -39,7 +46,8 @@
 
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.0/ace.js"></script> -->
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.0/ext-language_tools.js"></script> -->
-    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
     <script src="../src/ace.js"></script>
     <script src="../src/ext-language_tools.js"></script>
     <!-- <script> -->
@@ -47,8 +55,9 @@
         window.editor = editor;
     </script> -->
     <script src="js/Main.js"></script>
-    <!-- <script src="js/SelectBoxGene.js"></script> -->
+    <script src="js/SelectBoxGene.js"></script>
     <script src="js/List.js"></script>
+    <script src="js/filecomplete.js"></script>
     <script>
         // createSelectBox();
         setupEditer();
