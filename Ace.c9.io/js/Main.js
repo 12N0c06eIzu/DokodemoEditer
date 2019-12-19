@@ -54,6 +54,7 @@ function update() {
 
     idoc.open();
     idoc.write(editor.getValue());
+    idoc.write(editor.getValue());
     idoc.close();
 }
 
