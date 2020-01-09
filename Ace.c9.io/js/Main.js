@@ -1,9 +1,39 @@
-var editor = ace.edit("editor");
 
+var preNum = $("pre").length;
 var themeName, modeName, fontSize;
+for(var i = 0; i < preNum; i++){
+    var editor = ace.edit("editor" + (i + 1));
+
+    console.log('preNumは'+preNum);
+    
+
+    editor.$blockScrolling = Infinity;
+
+
+    window.editor = editor;
+
+    // 自動補完、スニペット、ライブ補完
+    // テキストエディタのテーマを設定する
+    editor.setTheme("ace/theme/chrome");
+    // 言語モード
+    editor.getSession().setMode("ace/mode/html");
+    // フォントサイズ
+    editor.setFontSize(14);
+    editor.getSession().on('change', function () {
+        update();
+    });
+
+    editor.focus();
+    editor.setOptions({
+        enableBasicAutocompletion: true,
+        enableSnippets: true,
+        enableLiveAutocompletion: true
+    });
+
+}
+
 
 // Chromeのコンソールの警告を解消
-editor.$blockScrolling = Infinity;
 
 function setupEditer() {
     window.editor = editor;
