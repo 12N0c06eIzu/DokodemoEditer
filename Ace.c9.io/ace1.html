@@ -36,14 +36,21 @@
                 </td>
             </tr>
                 <tr>
-                    <td> fontsize</td>
+                    <td> Fontsize</td>
                     <td>
                         <button onclick="changeFontSizePlus();">＋</button>
                         <button onclick="changeFontSizeMinus();">－</button></td>
                     </tr>
                     
+                    <tr>
+                        <td>                
+                            <button id="save" onclick="txtSave()">保存</button>
+                        </td>
+                        <td>                
+                            <button id="load" onclick="txtLoad()">呼出</button>
+                        </td>
+                    </tr>
                 </table>
-                
                 <button id="download" download="index.html" onclick=" downloadFile()">
                     ダウンロード
                 </button>
@@ -74,6 +81,7 @@
     <script src="js/SelectBoxGene.js"></script>
     <script src="js/List.js"></script>
     <script src="js/filecomplete.js"></script>
+    <script src="js/save.js"></script>
     <script>
         setupEditer();
         update();
