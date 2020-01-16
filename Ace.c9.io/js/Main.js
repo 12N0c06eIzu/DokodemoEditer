@@ -1,7 +1,7 @@
 var editor = ace.edit("editor");
 
 var themeName, modeName, fontSize;
-
+fontSize = 14;
 // Chromeのコンソールの警告を解消
 editor.$blockScrolling = Infinity;
 
@@ -54,7 +54,7 @@ function update() {
 
     idoc.open();
     idoc.write(editor.getValue());
-    idoc.write(editor.getValue());
+    // idoc.write(editor.getValue());
     idoc.close();
 }
 
@@ -93,3 +93,18 @@ function outputThemeSelect(obj) {
 
 }
 
+
+function changeFontSizePlus(){
+    fontSize += 2;
+    editor.setFontSize(fontSize);
+    
+    console.log(fontSize);
+  }
+  function changeFontSizeMinus(){
+    if(fontSize >= 10){
+      fontSize -= 2;
+    }
+    console.log(fontSize);
+    editor.setFontSize(fontSize);
+  
+  }

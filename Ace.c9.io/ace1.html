@@ -7,6 +7,15 @@
     <!-- <link rel="stylesheet" href="css/menu.css"> -->
     <link rel="stylesheet" href="css/menu.css">
     <link rel="stylesheet" href="css/main.css">
+    <style>
+        #nav-content{
+            padding: 20px;
+        }
+        #btn{
+            margin-top: 20px;
+            text-align: left;
+        }
+    </style>
 </head>
 
 
@@ -16,19 +25,34 @@
         <label id="nav-open" for="nav-input"><span></span></label>
         <label class="nav-unshown" id="nav-close" for="nav-input"></label>
         <div id="nav-content">
-            <select name="language" id="languageList" onchange="outputLanguageSelect(this);">
-            </select>
-            <select name="theme" id="themeList" onchange="outputThemeSelect(this);">
-            </select>
-            <button onclick="changeFontSizePlus();">＋</button>
-            <button onclick="changeFontSizeMinus();">－</button><br>
-            
-            <!-- <input type="text" id="inputfilename"> -->
-            <a href="#" id="download" download="index.html" style="text-decoration: none;">ダウンロード</a>
-
-            <br>
-            <br>
-            <input type="file" name="selfile" id="s_file">
+            <table>
+            <tr>
+                <td>Language</td>
+                <td><select name="language" id="languageList" onchange="outputLanguageSelect(this);"></select>
+                </td>
+            </tr>
+            <tr>
+                <td>Theme</td>
+                <td>                 <select name="theme" id="themeList" onchange="outputThemeSelect(this);"></select>
+                </td>
+            </tr>
+                <tr>
+                    <td> fontsize</td>
+                    <td>
+                        <button onclick="changeFontSizePlus();">＋</button>
+                        <button onclick="changeFontSizeMinus();">－</button></td>
+                    </tr>
+                    
+                </table>
+                
+                <!-- <input type="text" id="inputfilename"> -->
+                <button id="btn">
+                    <a href="#" id="download" download="index.html" style="text-decoration: none;">ダウンロード</a>
+                </button>
+                
+                <br>
+                <br>
+                <input type="file" name="selfile" id="s_file">
         </div>
     </div>
 </header>

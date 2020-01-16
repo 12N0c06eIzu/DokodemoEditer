@@ -16,18 +16,3 @@ console.log(arrayName);
 };
 
 
-
-function changeFontSizePlus(){
-  fontSize += 2;
-  editor.setFontSize(fontSize);
-  
-  console.log(fontSize);
-}
-function changeFontSizeMinus(){
-  if(fontSize >= 10){
-    fontSize -= 2;
-  }
-  console.log(fontSize);
-  editor.setFontSize(fontSize);
-
-}
