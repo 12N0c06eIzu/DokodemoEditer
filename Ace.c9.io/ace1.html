@@ -4,14 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <title>Dokodemo-Editer</title>
-    <!-- <link rel="stylesheet" href="css/menu.css"> -->
     <link rel="stylesheet" href="css/menu.css">
     <link rel="stylesheet" href="css/main.css">
     <style>
         #nav-content{
             padding: 20px;
         }
-        #btn{
+        #download{
             margin-top: 20px;
             text-align: left;
         }
@@ -45,9 +44,8 @@
                     
                 </table>
                 
-                <!-- <input type="text" id="inputfilename"> -->
-                <button id="btn">
-                    <a href="#" id="download" download="index.html" style="text-decoration: none;">ダウンロード</a>
+                <button id="download" download="index.html" onclick=" downloadFile()">
+                    ダウンロード
                 </button>
                 
                 <br>
@@ -77,7 +75,6 @@
     <script src="js/List.js"></script>
     <script src="js/filecomplete.js"></script>
     <script>
-        // createSelectBox();
         setupEditer();
         update();
         createSelectBox(language, "languageList");
