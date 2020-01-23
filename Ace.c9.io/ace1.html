@@ -43,6 +43,7 @@
                     </tr>
                     
                     <tr>
+                        <td>Keep</td>
                         <td>                
                             <button id="save" onclick="txtSave()">保存</button>
                         </td>
@@ -58,6 +59,10 @@
                 <br>
                 <br>
                 <input type="file" name="selfile" id="s_file">
+                <br>
+                <button type=“button” onclick="window.open('./ffwcheck/index.php','txtContent')">進捗ダメです</button>
+                <br>
+                <button onclick="update();">Live Editor</button>
         </div>
     </div>
 </header>
@@ -69,7 +74,7 @@
         <div id="editor" name="editor">
         </div>
 
-        <iframe id="iframe" frameBorder="0">
+        <iframe id="iframe" name="txtContent" frameBorder="0">
         </iframe>
     </div>
 
@@ -83,10 +88,13 @@
     <script src="js/filecomplete.js"></script>
     <script src="js/save.js"></script>
     <script>
+        var flag = false;
         setupEditer();
         update();
         createSelectBox(language, "languageList");
         createSelectBox(theme, "themeList");
+        flag = true;
+        txtLoad();
     </script>
 </body>
 
